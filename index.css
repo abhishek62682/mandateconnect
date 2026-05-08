@@ -1,0 +1,45 @@
+ .strips__frame {
+    background-color: #f97316;
+    display: flex;
+    overflow: hidden;
+    padding: 10px 0;
+    gap: 0;
+  }
+
+  .marquee__track {
+    display: flex;
+    gap: 40px;
+    animation: marquee 20s linear infinite;
+    white-space: nowrap;
+    will-change: transform;
+  }
+
+  .strips__frame:hover .marquee__track {
+    animation-play-state: paused;
+  }
+
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .strips__wrapper {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .strips__wrapper i {
+    font-size: 18px;
+    color: white;
+  }
+
+  .strips__wrapper p {
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 400;
+    color: white;
+    margin: 0;
+    white-space: nowrap;
+  }
