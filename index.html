@@ -113,7 +113,94 @@
       })();
     </script>
 
-    
+    <!-- ===== FIXED ACTION BUTTONS ===== -->
+    <div class="fixed bottom-25 right-6 z-50 flex flex-col items-end gap-3">
+
+      <!-- Call Button -->
+      <a href="tel:+918928862682"
+        style="max-width: 52px; transition: max-width 0.4s cubic-bezier(0.4,0,0.2,1), background 0.3s;"
+        onmouseenter="this.style.maxWidth='200px'"
+        onmouseleave="this.style.maxWidth='52px'"
+        class="group flex items-center justify-end bg-dark hover:bg-orange text-white rounded-full shadow-lg overflow-hidden h-[52px]">
+        <span class="font-secondary text-[13px] font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100 pl-4 pr-1">Call Us Now</span>
+        <span class="w-[52px] h-[52px] flex items-center justify-center flex-shrink-0">
+          <i class="ri-phone-line text-[20px]"></i>
+        </span>
+      </a>
+
+      <!-- WhatsApp Button -->
+      <a href="https://wa.me/918928862682?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20your%20services."
+        target="_blank"
+        style="max-width: 52px; transition: max-width 0.4s cubic-bezier(0.4,0,0.2,1), background 0.3s;"
+        onmouseenter="this.style.maxWidth='200px'"
+        onmouseleave="this.style.maxWidth='52px'"
+        class="group flex items-center justify-end bg-[#25D366] hover:bg-[#1ebe5d] text-white rounded-full shadow-lg overflow-hidden h-[52px]">
+        <span class="font-secondary text-[13px] font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100 pl-4 pr-1">Chat on WhatsApp</span>
+        <span class="w-[52px] h-[52px] flex items-center justify-center flex-shrink-0">
+          <i class="ri-whatsapp-line text-[22px]"></i>
+        </span>
+      </a>
+
+    </div>
+
+    <!-- ===== NAVBAR ===== -->
+    <style>
+      #home { padding-top: 68px; margin-top: -68px; }
+      .hero-swiper, .hero-swiper .swiper-wrapper, .hero-swiper .swiper-slide { height: 100vh; }
+      body.sheet-open { overflow: hidden; }
+
+      #site-nav.scrolled #nav-bg {
+        background: rgba(245, 236, 224, 0.88);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-bottom: 1px solid rgba(17, 17, 17, 0.08);
+      }
+      #site-nav.scrolled .nav-link { color: rgba(17, 17, 17, 0.60); }
+      #site-nav.scrolled .nav-link:hover { color: #f55e36; }
+      #site-nav.scrolled #nav-logo { color: #111111; }
+      #site-nav.scrolled .nav-cta { border-color: rgba(17, 17, 17, 0.20); color: #111111; }
+      #site-nav.scrolled .nav-cta:hover { background: #f55e36; border-color: #f55e36; color: #fff; }
+      #site-nav.scrolled .nav-bar { background: #111111; }
+    </style>
+
+    <header id="site-nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+      <div id="nav-bg" class="transition-all duration-300">
+        <div class="px-8 md:px-0 max-w-7xl mx-auto h-[68px] flex items-center justify-between">
+
+          <!-- Logo -->
+          <a href="#home" class="font-primary text-white text-[22px] leading-none" id="nav-logo">
+            Mandate<span class="text-orange">Connect</span>
+          </a>
+
+          <!-- Desktop Links -->
+          <nav class="hidden md:flex items-center gap-7">
+            <a href="#home"           class="nav-link font-secondary text-[13px] text-white/70 hover:text-orange transition-colors duration-200">Home</a>
+            <a href="#about"          class="nav-link font-secondary text-[13px] text-white/70 hover:text-orange transition-colors duration-200">About Us</a>
+            <a href="#services"       class="nav-link font-secondary text-[13px] text-white/70 hover:text-orange transition-colors duration-200">Services</a>
+            <a href="#our-work"       class="nav-link font-secondary text-[13px] text-white/70 hover:text-orange transition-colors duration-200">Our Work</a>
+            <a href="#why-choose-us"  class="nav-link font-secondary text-[13px] text-white/70 hover:text-orange transition-colors duration-200">Why Choose Us</a>
+            <a href="#vision-mission" class="nav-link font-secondary text-[13px] text-white/70 hover:text-orange transition-colors duration-200">Vision & Mission</a>
+            <a href="#testimonials"   class="nav-link font-secondary text-[13px] text-white/70 hover:text-orange transition-colors duration-200">Testimonials</a>
+          </nav>
+
+          <!-- Desktop CTA -->
+          <a href="#contact" class="hidden md:inline-flex group items-center gap-2 text-dark text-[15px] font-semibold px-5 py-2.5 rounded-full bg-orange text-white transition-all duration-200">
+            Get in Touch
+            <div class="relative w-[16px] h-[16px] overflow-hidden flex items-center justify-center">
+              <i class="ri-arrow-right-up-line absolute text-[16px] transition-all duration-300 group-hover:translate-x-[16px] group-hover:-translate-y-[16px]"></i>
+              <i class="ri-arrow-right-up-line absolute text-[16px] -translate-x-[16px] translate-y-[16px] transition-all duration-300 group-hover:translate-x-0 group-hover:translate-y-0"></i>
+            </div>
+          </a>
+
+          <!-- Hamburger (mobile) -->
+          <button id="nav-toggle" aria-label="Open menu" class="md:hidden flex flex-col justify-center items-end gap-[5px] w-10 h-10 -mr-2">
+            <span class="nav-bar block w-[22px] h-[1.5px] bg-white rounded-full transition-all duration-300 origin-center"></span>
+            <span class="nav-bar block w-[22px] h-[1.5px] bg-white rounded-full transition-all duration-300 origin-center"></span>
+            <span class="nav-bar block w-[14px] h-[1.5px] bg-white rounded-full transition-all duration-300 origin-center"></span>
+          </button>
+        </div>
+      </div>
+    </header>
 
     <!-- ===== MOBILE SHEET ===== -->
     <div id="nav-backdrop" class="fixed inset-0 z-40 bg-black/40 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 md:hidden"></div>
